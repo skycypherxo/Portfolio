@@ -453,7 +453,7 @@ one life and there's just so much to get to! movies i haven't watched, books sta
           </div>
 
           {/* Photography Column (lg:col-span-7) */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-7 space-y-8 ">
             <div>
               <div className="flex items-center gap-2 text-white/50 text-[10px] uppercase tracking-[0.3em] font-bold mb-2">
                 <span className="text-white/60">+</span> {"// PHOTOGRAPHY GALLERY"}
