@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -17,32 +17,17 @@ import {
   Plane,
   BookOpen,
   Cpu,
-  PenTool,
   Twitter,
   Coffee,
   HeartHandshake,
+  Clapperboard,
   Menu,
+  
   X
 } from 'lucide-react';
 
 export default function AboutPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activePoem, setActivePoem] = React.useState<{
-    title: string;
-    ref: string;
-    content: string;
-    author: string;
-  } | null>(null);
-
-  React.useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActivePoem(null);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
 
   return (
     <main className="bg-black text-white min-h-screen">
@@ -248,7 +233,6 @@ export default function AboutPage() {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Main Content */}
       <div className="mx-auto max-w-[1600px] border-l border-r border-white/20 min-h-screen pt-28 pb-16 px-4 md:px-8 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12">
@@ -317,7 +301,7 @@ export default function AboutPage() {
                   alt="Vaishnavi Poti"
                   fill
                   priority
-                  className="object-cover grayscale contrast-110"
+                  className="object-cover grayscale contrast-110 scale-150 translate-x-16 hover:grayscale-[0] transition-all duration-500"
                   sizes="(max-width: 1024px) 100vw, 400px"
                 />
               </div>
@@ -346,63 +330,67 @@ export default function AboutPage() {
               Creative Intersections
             </h2>
             <p className="text-sm leading-6 text-white/55 max-w-3xl">
-              An active mind does not stop at training classifiers or compiling code. I am a lifelong learner fascinated by patterns, dynamics, and systems—whether modeled in software, composed in melodies, or explored in transit and mountains.
-            </p>
+one life and there's just so much to get to! movies i haven't watched, books stacking up, ideas i keep starting and not finishing, half written songs, midway built passion projects. i'm not trying to pick a lane, i just want to do all of it.            </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              {
-                title: "Solving Puzzles",
-                desc: "Fascinated by mathematical logic, cryptography, rubik's cubes and complex algorithmic riddles. Solving puzzles is where my engineering mindset thrives.",
-                icon: Puzzle
-              },
-              {
-                title: "Gaming",
-                desc: "Avid gamer; GTA V is my absolute favorite! I have a high score on tetris on one of the arcades. I love studying mechanics, competitive strategies, and pushing for perfect high scores.",
-                icon: Gamepad2
-              },
-              {
-                title: "Geopolitics",
-                desc: "I can disappear into a geopolitics rabbit hole for hours. Trade wars, diplomacy, infrastructure projects, shifting alliances, economic strategy, it's fascinating how decisions made in one corner of the world can ripple across entire countries and industries.",
-                icon: Globe2
-              },
-              {
-                title: "Piano & Singing",
-                desc: "Playing the piano, singing, and composing original melodies. Music is my sanctuary for acoustic creation.",
-                icon: Music
-              },
-              {
-                title: "Tinkering w/ Tech",
-                desc: "Building custom automation bots for communities (Discord/Reddit with 23M+ cumulative users) and training ML models or exploring hardware in my spare time.",
-                icon: Cpu
-              },
-              {
-                title: "Coffee Brewing",
-                desc: "I love making different types of coffee, experimenting with beans, grind sizes, brewing methods, and extraction techniques. There's something oddly satisfying about chasing the perfect cup.",
-                icon: Coffee
-              }
-              ,
-              {
-                title: "Reading",
-                desc: "Constantly devouring sci-fi, philosophy, technical documentation, and history. Exploring new perspectives is a constant habit.",
-                icon: BookOpen
-              },
-              {
-                title: "Trekking",
-                desc: "Hiking through dense mist, scaling mountain peaks, and disconnecting in nature. Physical challenges fuel mental clarity.",
-                icon: Compass
-              },
-              {
-                title: "Planes & Trains",
-                desc: "Fascinated by high-speed trains, aviation mechanics, and transit infrastructure. Anything that moves captures my attention.",
-                icon: Plane
-              },
-              {
-                title: "Volunteering",
-                desc: "Teaching kids cool STEM stuff, helping out with education/food drives, and constantly hunting down old books from friends and family to donate.",
-                icon: HeartHandshake
-              }
+{
+  title: "Coffee Brewing",
+  desc: "I love making different types of coffee, experimenting with beans, grind sizes, brewing methods, and extraction techniques. There's something oddly satisfying about chasing the perfect cup.",
+  icon: Coffee
+},
+{
+  title: "Gaming",
+  desc: "Avid gamer when it's time to not touch grass; GTA V still remains my absolute favorite after all these years! And yes, I absolutely optimize the fun out of games by learning every mechanic. Also somehow ended up with a high score on a Tetris arcade machine.",
+  icon: Gamepad2
+},
+{
+  title: "Geopolitics",
+  desc: "I can disappear into a geopolitics rabbit hole for hours. Trade wars, diplomacy, infrastructure, sanctions, border disputes, shifting alliances, and the list goes on. It's fascinating how decisions made in one corner of the world can ripple across entire countries and industries.",
+  icon: Globe2
+},
+{
+  title: "Music",
+  desc: "Started with classical piano, stayed because I fell in love with making music. I enjoy singing, improvising, and composing little melodies whenever inspiration randomly hits.",
+  icon: Music
+},
+{
+  title: "Planes & Trains",
+  desc: "Fascinated by high-speed trains, aviation mechanics, and transit infrastructure. Anything that moves captures my attention.",
+  icon: Plane
+},
+{
+  title: "Reading",
+  desc: "Constantly devouring sci-fi, philosophy, technical documentation, and history. Exploring new perspectives is a constant habit.",
+  icon: BookOpen
+},
+{
+  title: "Solving Puzzles",
+  desc: "Fascinated by different types of Rubik's Cubes, complex algorithmic riddles, crypto puzzles, or anything that makes my brain itch.",
+  icon: Puzzle
+},
+{
+  title: "Tinkering w/ Tech",
+  desc: "Building custom automation bots for communities (Discord/Reddit with 23M+ cumulative users), training ML models, and exploring hardware in my spare time.",
+  icon: Cpu
+},
+{
+  title: "Trekking",
+  desc: "Hiking through dense mist, scaling mountain peaks, and disconnecting in nature. Physical challenges fuel mental clarity.",
+  icon: Compass
+},
+{
+  title: "Volunteering",
+  desc: "Teaching kids cool STEM stuff, helping out with education and food drives, and constantly hunting down old books from friends and family to donate.",
+  icon: HeartHandshake
+},
+{
+  title: "YouTube & Editing",
+  desc: "Piecing together footage, chasing the right cuts, obsessing over pacing until it finally clicks. I just enjoy the whole process of turning raw clips into something worth watching.",
+  icon: Clapperboard
+},
+              
 
             ].map((item) => (
               <div key={item.title} className="border border-white/15 p-6 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
@@ -436,74 +424,31 @@ export default function AboutPage() {
                 Poetic Artifacts
               </h2>
               <p className="text-sm leading-6 text-white/55">
-                Selected poem snippets exploring movement, digital grids, and nature.
+                Two visual poems from the archive.
               </p>
             </div>
 
-            <div className="space-y-6">
-              {/* Poem 1 */}
-              <div className="border border-white/15 p-8 bg-white/[0.005] relative overflow-hidden group hover:bg-white hover:text-black hover:border-white transition duration-300 flex flex-col justify-between min-h-[300px]">
-                <PenTool className="absolute right-4 top-4 h-4 w-4 text-white/20 group-hover:text-black/20" />
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 group-hover:text-black/40 mb-6 font-mono">
-                    {"[POEM 01] // LATTICE AND LIGHT"}
+            <div className="grid gap-6">
+              {[
+                { id: '001', src: '/poetry/boxes.png', title: 'the boxes.' },
+                { id: '002', src: '/poetry/Trapped.png', title: 'trapped between stations.' },
+              ].map((poem) => (
+                <div key={poem.id} className="border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-white mb-4 border border-white/10 group-hover:border-black/10">
+                    <Image
+                      src={poem.src}
+                      alt={poem.title}
+                      fill
+                      className="object-contain transition duration-700 group-hover:scale-[1.01]"
+                      sizes="(max-width: 1024px) 100vw, 500px"
+                    />
                   </div>
-                  <pre className="font-mono text-xs leading-relaxed text-white/80 group-hover:text-black/80 whitespace-pre-wrap">
-                    {`A grid of numbers, cold and clean,
-A silent ghost inside the screen.
-Yet human hands have touched the keys,
-To wake the code, like evening breeze...`}
-                  </pre>
-                </div>
-                <div className="mt-8 pt-4 border-t border-white/10 group-hover:border-black/10 flex justify-between items-center">
-                  <button
-                    onClick={() => setActivePoem({
-                      title: "Lattice and Light",
-                      ref: "[POEM 01] // LATTICE AND LIGHT",
-                      content: `A grid of numbers, cold and clean,\nA silent ghost inside the screen.\nYet human hands have touched the keys,\nTo wake the code, like evening breeze.\n\nBetween the nodes, a whisper stays,\nOf shifting lines and dreaming days,\nFor logic holds a quiet art,\nThat starts in math and ends in heart.\n\nWe trace the pathways in the dark,\nAnd search for some electric spark,\nTo tell us that the mind we made,\nIs more than logic, light, and shade.\n\nFor in the weights and bias lines,\nA human aspiration shines,\nA dream of reaching out to see,\nA mirror of humanity.`,
-                      author: "VAISHNAVI POTI • 2025"
-                    })}
-                    className="text-[10px] uppercase tracking-[0.25em] font-semibold text-white/60 hover:text-white border border-white/20 hover:border-white/40 px-3 py-1.5 transition duration-300 group-hover:text-black/60 group-hover:border-black/20 group-hover:hover:bg-black group-hover:hover:text-white group-hover:hover:border-black"
-                  >
-                    Read Full Poem
-                  </button>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-black/30">
-                    2025
-                  </span>
-                </div>
-              </div>
-
-              {/* Poem 2 */}
-              <div className="border border-white/15 p-8 bg-white/[0.005] relative overflow-hidden group hover:bg-white hover:text-black hover:border-white transition duration-300 flex flex-col justify-between min-h-[300px]">
-                <PenTool className="absolute right-4 top-4 h-4 w-4 text-white/20 group-hover:text-black/20" />
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-white/40 group-hover:text-black/40 mb-6 font-mono">
-                    {"[POEM 02] // LOCOMOTION"}
+                  <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.25em] text-white/40 group-hover:text-black/50 font-mono transition-colors duration-300">
+                    <span>{poem.id}</span>
+                    <span>{poem.title}</span>
                   </div>
-                  <pre className="font-mono text-xs leading-relaxed text-white/80 group-hover:text-black/80 whitespace-pre-wrap">
-                    {`Steel on steel and iron track,
-A heavy engine turning back.
-Across the fields, a streak of white,
-A metal bird in search of light...`}
-                  </pre>
                 </div>
-                <div className="mt-8 pt-4 border-t border-white/10 group-hover:border-black/10 flex justify-between items-center">
-                  <button
-                    onClick={() => setActivePoem({
-                      title: "Locomotion",
-                      ref: "[POEM 02] // LOCOMOTION",
-                      content: `Steel on steel and iron track,\nA heavy engine turning back.\nAcross the fields, a streak of white,\nA metal bird in search of light.\n\nTo move, to fly, to chase the wind,\nLeaving the static world behind.\nIn planes and trains, a steady beat,\nWhere journey and horizon meet.\n\nThe signals blink from red to green,\nA flashing pulse upon the screen.\nThe rails extend, the engines roar,\nTo destinations searched before.\n\nWe speed across the empty plains,\nThrough summer heat and winter rains,\nFor in the engine's iron chest,\nIs movement that can never rest.`,
-                      author: "VAISHNAVI POTI • 2026"
-                    })}
-                    className="text-[10px] uppercase tracking-[0.25em] font-semibold text-white/60 hover:text-white border border-white/20 hover:border-white/40 px-3 py-1.5 transition duration-300 group-hover:text-black/60 group-hover:border-black/20 group-hover:hover:bg-black group-hover:hover:text-white group-hover:hover:border-black"
-                  >
-                    Read Full Poem
-                  </button>
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-white/30 group-hover:text-black/30">
-                    2026
-                  </span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -525,56 +470,29 @@ A metal bird in search of light...`}
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
-              {/* Photo 1: Large full width image */}
-              <div className="sm:col-span-2 border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
-                <div className="relative aspect-[16/9] w-full overflow-hidden bg-black mb-4">
-                  <Image
-                    src="/photography/train_motion.png"
-                    alt="Locomotion in motion"
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105 grayscale contrast-125 group-hover:grayscale-0"
-                    sizes="(max-width: 1024px) 100vw, 800px"
-                  />
+              {[
+                { id: '001', src: '/photography/001.jpg', span: 'sm:col-span-2', aspect: 'aspect-[16/9]', sizes: '(max-width: 1024px) 100vw, 800px' },
+                { id: '002', src: '/photography/002.jpg', span: '', aspect: 'aspect-square', sizes: '(max-width: 768px) 100vw, 400px' },
+                { id: '003', src: '/photography/003.jpg', span: '', aspect: 'aspect-square', sizes: '(max-width: 768px) 100vw, 400px' },
+                { id: '004', src: '/photography/004.jpg', span: '', aspect: 'aspect-square', sizes: '(max-width: 768px) 100vw, 400px' },
+                { id: '005', src: '/photography/005.jpg', span: '', aspect: 'aspect-square', sizes: '(max-width: 768px) 100vw, 400px' },
+                { id: '006', src: '/photography/006.jpg', span: 'sm:col-span-2', aspect: 'aspect-[16/9]', sizes: '(max-width: 1024px) 100vw, 800px' },
+              ].map((photo) => (
+                <div key={photo.id} className={`${photo.span} border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group`}>
+                  <div className={`relative ${photo.aspect} w-full overflow-hidden bg-black mb-4`}>
+                    <Image
+                      src={photo.src}
+                      alt={`Photography ${photo.id}`}
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-105 saturate-0 group-hover:saturate-100"
+                      sizes={photo.sizes}
+                    />
+                  </div>
+                  <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 group-hover:text-black/50 font-mono transition-colors duration-300">
+                    <span>{photo.id}</span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 group-hover:text-black/50 font-mono transition-colors duration-300">
-                  <span>{"PHOTO 01 // LOCOMOTION IN MOTION"}</span>
-                  <span>{"[LONG EXPOSURE]"}</span>
-                </div>
-              </div>
-
-              {/* Photo 2: Column image */}
-              <div className="border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
-                <div className="relative aspect-square w-full overflow-hidden bg-black mb-4">
-                  <Image
-                    src="/photography/mountain_trek.png"
-                    alt="Misty mountain trek"
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105 grayscale contrast-125 group-hover:grayscale-0"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
-                </div>
-                <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 group-hover:text-black/50 font-mono transition-colors duration-300">
-                  <span>{"PHOTO 02 // MISTY TREK"}</span>
-                  <span>{"[ALTITUDE 3000M]"}</span>
-                </div>
-              </div>
-
-              {/* Photo 3: Column image */}
-              <div className="border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
-                <div className="relative aspect-square w-full overflow-hidden bg-black mb-4">
-                  <Image
-                    src="/photography/urban_geometry.png"
-                    alt="Brutalist concrete architecture geometry"
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105 grayscale contrast-125 group-hover:grayscale-0"
-                    sizes="(max-width: 768px) 100vw, 400px"
-                  />
-                </div>
-                <div className="flex justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 group-hover:text-black/50 font-mono transition-colors duration-300">
-                  <span>{"PHOTO 03 // URBAN GRID"}</span>
-                  <span>{"[GEOMETRY STUDY]"}</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -591,35 +509,6 @@ A metal bird in search of light...`}
         </div>
       </div>
 
-      {/* Poetry Modal */}
-      {activePoem && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fade-in">
-          <div className="border border-white/20 p-8 md:p-12 bg-black max-w-2xl w-full relative max-h-[85vh] overflow-y-auto">
-            {/* Close Button */}
-            <button
-              onClick={() => setActivePoem(null)}
-              className="absolute right-4 top-4 text-white/50 hover:text-white transition uppercase text-[10px] tracking-[0.2em] font-semibold border border-white/25 hover:border-white/50 px-3 py-1 bg-black"
-            >
-              Close [ESC]
-            </button>
-            <div className="text-[10px] uppercase tracking-[0.3em] text-white/45 mb-6 font-mono">
-              {activePoem.ref}
-            </div>
-            <h3
-              className="text-[clamp(1.8rem,3.2vw,3rem)] font-bold uppercase leading-none tracking-normal text-white mb-8"
-              style={{ fontFamily: '"Bebas Neue", sans-serif', letterSpacing: '0.04em' }}
-            >
-              {activePoem.title}
-            </h3>
-            <pre className="font-mono text-sm leading-relaxed text-white/90 whitespace-pre-wrap pl-4 border-l border-white/20">
-              {activePoem.content}
-            </pre>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/45 mt-8 pt-4 border-t border-white/10 text-right">
-              {activePoem.author}
-            </div>
-          </div>
-        </div>
-      )}
     </main>
   );
 }
