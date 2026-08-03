@@ -330,7 +330,7 @@ export default function AboutPage() {
               Creative Intersections
             </h2>
             <p className="text-sm leading-6 text-white/55 max-w-3xl">
-one life and there's just so much to get to! movies i haven't watched, books stacking up, ideas i keep starting and not finishing, half written songs, midway built passion projects. i'm not trying to pick a lane, i just want to do all of it.            </p>
+one life and there&apos;s just so much to get to! movies i haven&apos;t watched, books stacking up, ideas i keep starting and not finishing, half written songs, midway built passion projects. i&apos;m not trying to pick a lane, i just want to do all of it.            </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
