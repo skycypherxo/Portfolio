@@ -25,6 +25,7 @@ import {
   
   X
 } from 'lucide-react';
+import { assetPath } from '../asset-path';
 
 export default function AboutPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -297,7 +298,7 @@ export default function AboutPage() {
             <div className="border border-white/20 p-4 bg-white/[0.005] hover:border-white/30 transition duration-300">
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-black">
                 <Image
-                  src="/vaish.png"
+                  src={assetPath('/vaish.png')}
                   alt="Vaishnavi Poti"
                   fill
                   priority
@@ -436,7 +437,7 @@ one life and there&apos;s just so much to get to! movies i haven&apos;t watched,
                 <div key={poem.id} className="border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
                   <div className="relative aspect-[3/4] w-full overflow-hidden bg-white mb-4 border border-white/10 group-hover:border-black/10">
                     <Image
-                      src={poem.src}
+                      src={assetPath(poem.src)}
                       alt={poem.title}
                       fill
                       className="object-contain transition duration-700 group-hover:scale-[1.01]"
@@ -481,7 +482,7 @@ one life and there&apos;s just so much to get to! movies i haven&apos;t watched,
                 <div key={photo.id} className={`${photo.span} border border-white/15 p-4 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group`}>
                   <div className={`relative ${photo.aspect} w-full overflow-hidden bg-black mb-4`}>
                     <Image
-                      src={photo.src}
+                      src={assetPath(photo.src)}
                       alt={`Photography ${photo.id}`}
                       fill
                       className="object-cover transition duration-700 group-hover:scale-105 saturate-0 group-hover:saturate-100"

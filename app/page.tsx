@@ -10,6 +10,7 @@ import {
   researchItems,
   timelineItems,
 } from './data';
+import { assetPath } from './asset-path';
 
 const statusColors: Record<string, string> = {
   'Published': 'bg-green-400',
@@ -338,7 +339,7 @@ export default function Home() {
               className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[70vw] md:w-[32vw] md:h-[32vw] max-w-[650px] max-h-[650px]"
             >
               <Image
-                src="/eye (1).png"
+                src={assetPath('/eye (1).png')}
                 alt="Eye"
                 fill
                 priority
