@@ -645,7 +645,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-white/15 bg-black">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:flex-row md:items-center md:justify-between md:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:px-8 lg:px-10">
           <p
             onClick={(e) => {
               if (e.detail === 3) {
@@ -657,9 +657,6 @@ export default function Home() {
           >
             © 2026 Vaishnavi Poti
           </p>
-          <a href="mailto:potivaishnavi21@gmail.com" className="transition hover:text-white">
-            potivaishnavi21@gmail.com
-          </a>
         </div>
       </footer>
     </main>

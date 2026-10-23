@@ -22,7 +22,7 @@ import {
   HeartHandshake,
   Clapperboard,
   Menu,
-  
+
   X
 } from 'lucide-react';
 import { assetPath } from '../asset-path';
@@ -208,7 +208,7 @@ export default function AboutPage() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-white transition-colors"
                   aria-label="Twitter"
-                  >
+                >
                   <Twitter className="h-5 w-5" />
                 </a>
                 <a
@@ -302,7 +302,7 @@ export default function AboutPage() {
                   alt="Vaishnavi Poti"
                   fill
                   priority
-                  className="object-cover grayscale contrast-110 scale-150 translate-x-16 hover:grayscale-[0] transition-all duration-500"
+                  className="object-cover grayscale contrast-110 scale-150 translate-x-12 hover:grayscale-[0] transition-all duration-500"
                   sizes="(max-width: 1024px) 100vw, 400px"
                 />
               </div>
@@ -331,67 +331,67 @@ export default function AboutPage() {
               Creative Intersections
             </h2>
             <p className="text-sm leading-6 text-white/55 max-w-3xl">
-one life and there&apos;s just so much to get to! movies i haven&apos;t watched, books stacking up, ideas i keep starting and not finishing, half written songs, midway built passion projects. i&apos;m not trying to pick a lane, i just want to do all of it.            </p>
+              one life and there&apos;s just so much to get to! movies i haven&apos;t watched, books stacking up, ideas i keep starting and not finishing, half written songs, midway built passion projects. i&apos;m not trying to pick a lane, i just want to do all of it.            </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-{
-  title: "Coffee Brewing",
-  desc: "I love making different types of coffee, experimenting with beans, grind sizes, brewing methods, and extraction techniques. There's something oddly satisfying about chasing the perfect cup.",
-  icon: Coffee
-},
-{
-  title: "Gaming",
-  desc: "Avid gamer when it's time to not touch grass; GTA V still remains my absolute favorite after all these years! And yes, I absolutely optimize the fun out of games by learning every mechanic. Also somehow ended up with a high score on a Tetris arcade machine.",
-  icon: Gamepad2
-},
-{
-  title: "Geopolitics",
-  desc: "I can disappear into a geopolitics rabbit hole for hours. Trade wars, diplomacy, infrastructure, sanctions, border disputes, shifting alliances, and the list goes on. It's fascinating how decisions made in one corner of the world can ripple across entire countries and industries.",
-  icon: Globe2
-},
-{
-  title: "Music",
-  desc: "Started with classical piano, stayed because I fell in love with making music. I enjoy singing, improvising, and composing little melodies whenever inspiration randomly hits.",
-  icon: Music
-},
-{
-  title: "Planes & Trains",
-  desc: "Fascinated by high-speed trains, aviation mechanics, and transit infrastructure. Anything that moves captures my attention.",
-  icon: Plane
-},
-{
-  title: "Reading",
-  desc: "Constantly devouring sci-fi, philosophy, technical documentation, and history. Exploring new perspectives is a constant habit.",
-  icon: BookOpen
-},
-{
-  title: "Solving Puzzles",
-  desc: "Fascinated by different types of Rubik's Cubes, complex algorithmic riddles, crypto puzzles, or anything that makes my brain itch.",
-  icon: Puzzle
-},
-{
-  title: "Tinkering w/ Tech",
-  desc: "Building custom automation bots for communities (Discord/Reddit with 23M+ cumulative users), training ML models, and exploring hardware in my spare time.",
-  icon: Cpu
-},
-{
-  title: "Trekking",
-  desc: "Hiking through dense mist, scaling mountain peaks, and disconnecting in nature. Physical challenges fuel mental clarity.",
-  icon: Compass
-},
-{
-  title: "Volunteering",
-  desc: "Teaching kids cool STEM stuff, helping out with education and food drives, and constantly hunting down old books from friends and family to donate.",
-  icon: HeartHandshake
-},
-{
-  title: "YouTube & Editing",
-  desc: "Piecing together footage, chasing the right cuts, obsessing over pacing until it finally clicks. I just enjoy the whole process of turning raw clips into something worth watching.",
-  icon: Clapperboard
-},
-              
+              {
+                title: "Coffee Brewing",
+                desc: "I love making different types of coffee, experimenting with beans, grind sizes, brewing methods, and extraction techniques. There's something oddly satisfying about chasing the perfect cup.",
+                icon: Coffee
+              },
+              {
+                title: "Gaming",
+                desc: "Avid gamer when it's time to not touch grass; GTA V still remains my absolute favorite after all these years! And yes, I absolutely optimize the fun out of games by learning every mechanic. Also somehow ended up with a high score on a Tetris arcade machine.",
+                icon: Gamepad2
+              },
+              {
+                title: "Geopolitics",
+                desc: "I can disappear into a geopolitics rabbit hole for hours. Trade wars, diplomacy, infrastructure, sanctions, border disputes, shifting alliances, and the list goes on. It's fascinating how decisions made in one corner of the world can ripple across entire countries and industries.",
+                icon: Globe2
+              },
+              {
+                title: "Music",
+                desc: "Started with classical piano, stayed because I fell in love with making music. I enjoy singing, improvising, and composing little melodies whenever inspiration randomly hits.",
+                icon: Music
+              },
+              {
+                title: "Planes & Trains",
+                desc: "Fascinated by high-speed trains, aviation mechanics, and transit infrastructure. Anything that moves captures my attention.",
+                icon: Plane
+              },
+              {
+                title: "Reading",
+                desc: "Constantly devouring sci-fi, philosophy, technical documentation, and history. Exploring new perspectives is a constant habit.",
+                icon: BookOpen
+              },
+              {
+                title: "Solving Puzzles",
+                desc: "Fascinated by different types of Rubik's Cubes, complex algorithmic riddles, crypto puzzles, or anything that makes my brain itch.",
+                icon: Puzzle
+              },
+              {
+                title: "Tinkering w/ Tech",
+                desc: "Building custom automation bots for communities (Discord/Reddit with 23M+ cumulative users), training ML models, and exploring hardware in my spare time.",
+                icon: Cpu
+              },
+              {
+                title: "Trekking",
+                desc: "Hiking through dense mist, scaling mountain peaks, and disconnecting in nature. Physical challenges fuel mental clarity.",
+                icon: Compass
+              },
+              {
+                title: "Volunteering",
+                desc: "Teaching kids cool STEM stuff, helping out with education and food drives, and constantly hunting down old books from friends and family to donate.",
+                icon: HeartHandshake
+              },
+              {
+                title: "YouTube & Editing",
+                desc: "Piecing together footage, chasing the right cuts, obsessing over pacing until it finally clicks. I just enjoy the whole process of turning raw clips into something worth watching.",
+                icon: Clapperboard
+              },
+
 
             ].map((item) => (
               <div key={item.title} className="border border-white/15 p-6 bg-white/[0.003] hover:bg-white hover:text-black hover:border-white transition duration-300 group">
@@ -511,7 +511,7 @@ one life and there&apos;s just so much to get to! movies i haven&apos;t watched,
       </div>
 
       <footer className="border-t border-white/15 bg-black mt-12">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:flex-row md:items-center md:justify-between md:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:px-8 lg:px-10">
           <p
             onClick={(e) => {
               if (e.detail === 3) {
@@ -523,9 +523,6 @@ one life and there&apos;s just so much to get to! movies i haven&apos;t watched,
           >
             © 2026 Vaishnavi Poti
           </p>
-          <a href="mailto:potivaishnavi21@gmail.com" className="transition hover:text-white">
-            potivaishnavi21@gmail.com
-          </a>
         </div>
       </footer>
     </main>
