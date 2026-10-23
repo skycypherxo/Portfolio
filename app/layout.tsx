@@ -103,6 +103,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "TNxDayqLjEoYW-YpDpc0I5-hDFBLCXPdi1HWHsYHgnE",
+  },
   category: "technology",
 };
 
