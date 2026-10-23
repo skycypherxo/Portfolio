@@ -100,7 +100,7 @@ export default function Home() {
               <Github className="h-4.5 w-4.5" />
             </a>
             <a
-              href="https://x.com/vaish_codes"
+              href="https://x.com/reallocalLLM"
               target="_blank"
               rel="noreferrer noopener"
               className="hover:text-white transition-colors"
@@ -208,7 +208,7 @@ export default function Home() {
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://x.com/vaish_codes"
+                  href="https://x.com/reallocalLLM"
                   target="_blank"
                   rel="noreferrer noopener"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -242,6 +242,7 @@ export default function Home() {
       </AnimatePresence>
 
       <section className="relative min-h-screen overflow-hidden border-b border-white/20 bg-black pt-14">
+        <h1 className="sr-only">Vaishnavi Poti — AI Engineer, Researcher &amp; Fullstack Developer</h1>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.18)_1px,transparent_1px)] bg-[size:25%_50%] opacity-80" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_18%,rgba(0,0,0,0.12)_52%,rgba(0,0,0,0.78)_100%)]" />
@@ -645,7 +646,17 @@ export default function Home() {
 
       <footer className="border-t border-white/15 bg-black">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:flex-row md:items-center md:justify-between md:px-8 lg:px-10">
-          <p>© 2026 Vaishnavi Poti</p>
+          <p
+            onClick={(e) => {
+              if (e.detail === 3) {
+                window.dispatchEvent(new CustomEvent('toggle-stats-viewer'));
+              }
+            }}
+            title="© 2026 Vaishnavi Poti (Triple-click or Ctrl+Shift+V for stats)"
+            className="cursor-default select-none transition hover:text-white/70"
+          >
+            © 2026 Vaishnavi Poti
+          </p>
           <a href="mailto:potivaishnavi21@gmail.com" className="transition hover:text-white">
             potivaishnavi21@gmail.com
           </a>

@@ -94,7 +94,7 @@ export default function AboutPage() {
               <Github className="h-4.5 w-4.5" />
             </a>
             <a
-              href="https://x.com/vaish_codes"
+              href="https://x.com/reallocalLLM"
               target="_blank"
               rel="noreferrer noopener"
               className="hover:text-white transition-colors"
@@ -202,7 +202,7 @@ export default function AboutPage() {
                   <Github className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://x.com/vaish_codes"
+                  href="https://x.com/reallocalLLM"
                   target="_blank"
                   rel="noreferrer noopener"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -510,6 +510,24 @@ one life and there&apos;s just so much to get to! movies i haven&apos;t watched,
         </div>
       </div>
 
+      <footer className="border-t border-white/15 bg-black mt-12">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-6 text-[10px] uppercase tracking-[0.4em] text-white/45 md:flex-row md:items-center md:justify-between md:px-8 lg:px-10">
+          <p
+            onClick={(e) => {
+              if (e.detail === 3) {
+                window.dispatchEvent(new CustomEvent('toggle-stats-viewer'));
+              }
+            }}
+            title="© 2026 Vaishnavi Poti (Triple-click or Ctrl+Shift+V for stats)"
+            className="cursor-default select-none transition hover:text-white/70"
+          >
+            © 2026 Vaishnavi Poti
+          </p>
+          <a href="mailto:potivaishnavi21@gmail.com" className="transition hover:text-white">
+            potivaishnavi21@gmail.com
+          </a>
+        </div>
+      </footer>
     </main>
   );
 }
