@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     "Deep Learning",
   ],
   alternates: {
-    canonical: siteUrl,
+    canonical: `${siteUrl}/`,
   },
   openGraph: {
     title: "Vaishnavi Poti | AI Engineer, Researcher & Fullstack Developer",
     description:
       "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, and incoming MS in AI at Texas A&M University.",
-    url: siteUrl,
+    url: `${siteUrl}/`,
     siteName: "Vaishnavi Poti Portfolio",
     locale: "en_US",
     type: "profile",

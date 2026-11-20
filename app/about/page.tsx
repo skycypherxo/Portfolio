@@ -178,7 +178,7 @@ export default function AboutPage() {
                 About
               </Link>
               <a
-                href="https://skycypherxo.github.io/Resume/v4.pdf"
+                href="https://skycypherxo.github.io/Resume/v6.pdf"
                 target="_blank"
                 rel="noreferrer noopener"
                 onClick={() => setIsMobileMenuOpen(false)}
