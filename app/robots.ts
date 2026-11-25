@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://skycypherxo.github.io/portfolio';
+  const baseUrl = 'https://skycypherxo.github.io/Portfolio';
 
   return {
     rules: {

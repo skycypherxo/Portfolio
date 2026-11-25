@@ -71,10 +71,10 @@ export const researchItems = [
 
 export const timelineItems = [
   {
-    year: 'Aug 2026 (Incoming)',
+    year: '2026 - Present',
     title: 'MS in Artificial Intelligence',
     company: 'Texas A&M University',
-    description: 'Starting Master of Science in Artificial Intelligence. Specializing in advanced machine learning, neural architectures, autonomous systems, and AI research.',
+    description: 'Pursuing Master of Science in Artificial Intelligence. Specializing in advanced machine learning, neural architectures, autonomous systems, and AI research.',
     highlights: [],
   },
   {

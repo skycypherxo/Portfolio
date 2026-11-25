@@ -30,7 +30,7 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
 });
 
-const siteUrl = "https://skycypherxo.github.io/portfolio";
+const siteUrl = "https://skycypherxo.github.io/Portfolio";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | Vaishnavi Poti",
   },
   description:
-    "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, incoming MS in AI at Texas A&M University, and ML Research Author. Explore projects in multi-agent systems, deep learning, and fullstack engineering.",
+    "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, MS in AI at Texas A&M University, and ML Research Author. Explore projects in multi-agent systems, deep learning, and fullstack engineering.",
   applicationName: "Vaishnavi Poti Portfolio",
   authors: [{ name: "Vaishnavi Poti", url: siteUrl }],
   creator: "Vaishnavi Poti",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vaishnavi Poti | AI Engineer, Researcher & Fullstack Developer",
     description:
-      "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, and incoming MS in AI at Texas A&M University.",
+      "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, and MS in AI at Texas A&M University.",
     url: `${siteUrl}/`,
     siteName: "Vaishnavi Poti Portfolio",
     locale: "en_US",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vaishnavi Poti | AI Engineer, Researcher & Fullstack Developer",
     description:
-      "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, and incoming MS in AI at Texas A&M University.",
+      "Official portfolio of Vaishnavi Poti — AI & Data Science Specialist, Founder of AceRyx, and MS in AI at Texas A&M University.",
     site: "@reallocalLLM",
     creator: "@reallocalLLM",
     images: [`${siteUrl}/vaish.png`],
@@ -152,7 +152,7 @@ const structuredData = {
         "Python",
       ],
       description:
-        "AI & Data Science researcher, Founder of AceRyx, and incoming MS in AI student at Texas A&M University.",
+        "AI & Data Science researcher, Founder of AceRyx, and MS in AI student at Texas A&M University.",
     },
     {
       "@type": "WebSite",
